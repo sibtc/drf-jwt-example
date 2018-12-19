@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 
     # Third-Party Apps
     'rest_framework',
-    'rest_framework.authtoken',  # <-- Here
 
     # Local Apps (Your project's apps)
     'myapi.core',
@@ -129,6 +128,6 @@ STATIC_URL = '/static/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
 }
